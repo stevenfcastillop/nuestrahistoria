@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Un fragmento de nuestra historia</title>
+	<style>
+		:root {
+			--rosa: #ffb6c1;
+			--rosa-fuerte: #e75480;
+			--dorado: #ffd700;
+			--blanco: #fff8f0;
+			--texto: #a8325a;
+		}
+		html, body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			min-height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: linear-gradient(135deg, var(--rosa) 0%, var(--dorado) 100%);
+		}
+		.center-text {
+			text-align: center;
+			font-size: clamp(1.1rem, 2vw, 2.2rem);
+			color: var(--texto);
+			padding: 2rem 2.5rem;
+			background: var(--blanco);
+			border-radius: 24px;
+			box-shadow: 0 4px 24px rgba(231,84,128,0.12);
+			border: 2px solid var(--dorado);
+			position: relative;
+		}
+		.center-text:before {
+			content: '💌';
+			position: absolute;
+			top: -1.5rem;
+			left: 50%;
+			transform: translateX(-50%);
+			font-size: 2.5rem;
+			color: var(--rosa-fuerte);
+			text-shadow: 0 2px 8px var(--dorado);
+		}
+		a {
+			display: inline-block;
+			padding: 0.75em 2em;
+			font-size: 1.2rem;
+			background: linear-gradient(90deg, var(--rosa-fuerte), var(--dorado));
+			color: #fff;
+			text-decoration: none;
+			border-radius: 8px;
+			box-shadow: 0 1px 4px rgba(231,84,128,0.12);
+			transition: background 0.2s, box-shadow 0.2s;
+			border: none;
+			font-weight: bold;
+			margin-top: 1.5rem;
+		}
+		a:hover {
+			background: linear-gradient(90deg, var(--dorado), var(--rosa-fuerte));
+			box-shadow: 0 2px 12px var(--rosa-fuerte);
+		}
+	</style>
+</head>
+<body>
+	<div class="center-text">
+		<div style="margin-bottom: 1.5em;">
+			Amor mío,<br>
+			a pesar de todo lo vivido,<br>
+			sigues siendo la mujer de mi vida.<br>
+			Quiero reconquistarte, paso a paso,<br>
+			y recordarte que no importa el tiempo ni la distancia:<br>
+			mi corazón siempre te pertenece.
+		</div>
+		<div style="margin-bottom: 1.5em;">
+			Contigo, la vida tiene sentido.<br>
+			Tú eres mi luz en la oscuridad,<br>
+			y junto a nuestra hija,<br>
+			son mi mayor motivo de alegría,<br>
+			mi tesoro más grande,<br>
+			mi felicidad más pura.
+		</div>
+		<div style="margin-bottom: 2em;">
+			No cambiaría lo que tenemos por nada en el mundo.<br>
+			Y aunque el destino intente ponernos a prueba,<br>
+			lucharé por estar con ustedes,<br>
+			por cuidarlas y amarlas siempre,<br>
+			hoy, mañana y para toda la vida.
+		</div>
+		<a href="nuestrahistoria1.html" style="display:inline-block;padding:0.75em 2em;font-size:1.2rem;background:#0078d7;color:#fff;text-decoration:none;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,0.08);transition:background 0.2s;">Continuar</a>
+	</div>
+</body>
+</html>

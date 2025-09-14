@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nuestro Amor en Dos Corazones</title>
+	<style>
+		:root {
+			--rosa: #ffb6c1;
+			--rosa-fuerte: #e75480;
+			--dorado: #ffd700;
+			--blanco: #fff8f0;
+			--texto: #a8325a;
+		}
+		body {
+			margin: 0;
+			padding: 0;
+			min-height: 100vh;
+			background: linear-gradient(135deg, var(--rosa) 0%, var(--dorado) 100%);
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		.corazones-flex {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 2vw;
+			width: 100vw;
+			max-width: 1000px;
+			margin: 0 auto;
+		}
+		.corazon-table {
+			border-collapse: collapse;
+		}
+		.corazon-table td {
+			width: 60px;
+			height: 60px;
+			text-align: center;
+			vertical-align: middle;
+			padding: 2px;
+		}
+		.corazon-img {
+			width: 56px;
+			height: 56px;
+			object-fit: cover;
+			border-radius: 50%;
+			box-shadow: 0 2px 8px var(--rosa-fuerte);
+			border: 2px solid var(--dorado);
+			background: #fff;
+			transition: box-shadow 0.2s, border 0.2s;
+			cursor: pointer;
+		}
+		.corazon-img:hover {
+			box-shadow: 0 4px 16px var(--dorado);
+			border: 2px solid var(--rosa-fuerte);
+		}
+		.corazon-center {
+			width: 110px;
+			height: 110px;
+			border-radius: 50%;
+			box-shadow: 0 2px 12px var(--rosa-fuerte);
+			border: 4px solid var(--dorado);
+			background: var(--blanco);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			margin: 0 auto 1.2rem auto;
+			position: relative;
+		}
+		.corazon-center:before {
+			content: '💞';
+			position: absolute;
+			top: -1.7rem;
+			left: 50%;
+			transform: translateX(-50%);
+			font-size: 2.2rem;
+			color: var(--rosa-fuerte);
+			text-shadow: 0 2px 8px var(--dorado);
+		}
+		.corazon-center img {
+			width: 80px;
+			height: 80px;
+			border-radius: 50%;
+			object-fit: cover;
+			margin-bottom: 0.5rem;
+			border: 2px solid var(--rosa-fuerte);
+		}
+		.corazon-mensaje {
+			text-align: center;
+			font-size: 1.3rem;
+			color: var(--texto);
+			font-weight: bold;
+			max-width: 420px;
+			background: var(--blanco);
+			border-radius: 12px;
+			border: 1.5px solid var(--dorado);
+			margin-top: 1.5rem;
+			padding: 1.2rem 1rem 1rem 1rem;
+			box-shadow: 0 2px 12px rgba(231,84,128,0.10);
+		}
+		#modal-img {
+			background: rgba(255,182,193,0.92);
+			backdrop-filter: blur(2px);
+		}
+		#modal-img-content {
+			border: 4px solid var(--dorado);
+			box-shadow: 0 4px 32px var(--rosa-fuerte);
+			background: var(--blanco);
+		}
+		#modal-img:before {
+			content: '💖';
+			position: absolute;
+			top: 0rem;
+			left: 50%;
+			transform: translateX(-50%);
+			font-size: 2.5rem;
+			color: var(--rosa-fuerte);
+			text-shadow: 0 2px 8px var(--dorado);
+		}
+		#close-modal {
+			color: var(--rosa-fuerte);
+			text-shadow: 0 2px 8px var(--dorado);
+		}
+		@media (max-width: 900px) {
+			.corazones-flex { flex-direction: column; gap: 1.5rem; }
+		}
+		@media (max-width: 600px) {
+			.corazon-table td { width: 36px; height: 36px; padding: 1px; }
+			.corazon-img { width: 32px; height: 32px; }
+			.corazon-center { width: 60px; height: 60px; }
+			.corazon-center img { width: 44px; height: 44px; }
+			.corazon-mensaje { font-size: 1rem; max-width: 95vw; }
+		}
+	</style>
+	</head>
+	<body>
+		<!-- Modal para mostrar imagen grande -->
+		<div id="modal-img" style="display:none;position:fixed;z-index:9999;left:0;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.8);justify-content:center;align-items:center;">
+			<span id="close-modal" style="position:absolute;top:30px;right:40px;font-size:2.5rem;color:#fff;cursor:pointer;font-weight:bold;z-index:10001;">&times;</span>
+			<img id="modal-img-content" src="" style="max-width:90vw;max-height:85vh;border-radius:16px;box-shadow:0 4px 32px #000a;z-index:10000;" alt="Imagen grande">
+		</div>
+<body>
+	<div class="corazones-flex">
+		<!-- Corazón izquierdo (fotos 4-10) -->
+		<table class="corazon-table" style="margin-right: 1vw;">
+			<tr>
+				   <td></td><td><img src="img/foto4.jpg" class="corazon-img" onclick="openModal(this)"></td><td></td><td><img src="img/foto5.jpg" class="corazon-img" onclick="openModal(this)"></td><td></td>
+			</tr>
+			<tr>
+				   <td><img src="img/foto6.jpg" class="corazon-img" onclick="openModal(this)"></td><td></td><td><img src="img/foto7.jpeg" class="corazon-img" onclick="openModal(this)"></td><td></td><td><img src="img/foto8.jpg" class="corazon-img" onclick="openModal(this)"></td>
+			</tr>
+			<tr>
+				   <td></td><td><img src="img/foto9.jpg" class="corazon-img" onclick="openModal(this)"></td><td></td><td><img src="img/foto10.jpg" class="corazon-img" onclick="openModal(this)"></td><td></td>
+			</tr>
+			<tr>
+				   <td></td><td></td><td><img src="img/foto18.jpg" class="corazon-img" onclick="openModal(this)"></td><td></td><td></td>
+			</tr>
+		</table>
+		<!-- Centro con foto18 y mensaje -->
+		<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-width: 180px; max-width: 220px;">
+			<div class="corazon-center">
+				<img src="img/foto18.jpg" alt="Nuestro amor" onclick="openModal(this)">
+			</div>
+			<div class="corazon-mensaje">
+				Nuestro amor será eterno y que nada nos podrá separar,<br>
+				y espero me puedas dar esa segunda oportunidad de estar juntos.
+			</div>
+		</div>
+		<!-- Corazón derecho (fotos 11-17) -->
+		<table class="corazon-table" style="margin-left: 1vw;">
+			<tr>
+				   <td></td><td><img src="img/foto11.jpg" class="corazon-img" onclick="openModal(this)"></td><td></td><td><img src="img/foto12.jpeg" class="corazon-img" onclick="openModal(this)"></td><td></td>
+			</tr>
+			<tr>
+				   <td><img src="img/foto13.jpg" class="corazon-img" onclick="openModal(this)"></td><td></td><td><img src="img/foto14.jpg" class="corazon-img" onclick="openModal(this)"></td><td></td><td><img src="img/foto15.jpg" class="corazon-img" onclick="openModal(this)"></td>
+			</tr>
+			<tr>
+				   <td></td><td><img src="img/foto16.jpg" class="corazon-img" onclick="openModal(this)"></td><td></td><td><img src="img/foto17.jpg" class="corazon-img" onclick="openModal(this)"></td><td></td>
+			</tr>
+			<tr>
+				   <td></td><td></td><td><img src="img/foto18.jpg" class="corazon-img" onclick="openModal(this)"></td><td></td><td></td>
+			</tr>
+		</table>
+	</div>
+	</body>
+	<script>
+	function openModal(img) {
+		var modal = document.getElementById('modal-img');
+		var modalImg = document.getElementById('modal-img-content');
+		modal.style.display = 'flex';
+		modalImg.src = img.src;
+	}
+	window.onload = function() {
+		document.getElementById('close-modal').onclick = function() {
+			document.getElementById('modal-img').style.display = 'none';
+		}
+		document.getElementById('modal-img').onclick = function(e) {
+			if (e.target === this) this.style.display = 'none';
+		}
+	}
+	</script>
+	</html>
+</body>
+</html>

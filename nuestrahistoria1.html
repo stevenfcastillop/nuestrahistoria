@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nuestra Historia</title>
+	<style>
+		:root {
+			--rosa: #ffb6c1;
+			--rosa-fuerte: #e75480;
+			--dorado: #ffd700;
+			--blanco: #fff8f0;
+			--texto: #a8325a;
+		}
+		body {
+			margin: 0;
+			padding: 0;
+			min-height: 100vh;
+			background: linear-gradient(135deg, var(--rosa) 0%, var(--dorado) 100%);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.container {
+			text-align: center;
+			width: 95vw;
+			max-width: 900px;
+			margin: 2rem auto;
+			background: var(--blanco);
+			border-radius: 24px;
+			box-shadow: 0 4px 24px rgba(231,84,128,0.12);
+			padding: 2rem 1rem;
+			border: 2px solid var(--dorado);
+			position: relative;
+		}
+		.container:before {
+			content: '💖';
+			position: absolute;
+			top: -1.5rem;
+			left: 50%;
+			transform: translateX(-50%);
+			font-size: 2.5rem;
+			color: var(--rosa-fuerte);
+			text-shadow: 0 2px 8px var(--dorado);
+		}
+		.historia-table {
+			width: 100%;
+			border-collapse: separate;
+			border-spacing: 0 2rem;
+		}
+		.historia-table td {
+			vertical-align: middle;
+			text-align: center;
+			padding: 1rem;
+		}
+		.historia-img {
+			width: 100%;
+			max-width: 180px;
+			height: auto;
+			border-radius: 16px;
+			box-shadow: 0 1px 8px var(--rosa-fuerte);
+			object-fit: cover;
+			border: 2px solid var(--dorado);
+		}
+		.historia-text {
+			font-size: clamp(1rem, 2.5vw, 1.3rem);
+			color: var(--texto);
+			padding: 0 0.5rem;
+		}
+		@media (max-width: 700px) {
+			.historia-table, .historia-table tbody, .historia-table tr, .historia-table td {
+				display: block;
+				width: 100%;
+			}
+			.historia-table tr {
+				margin-bottom: 2rem;
+			}
+			.historia-table td {
+				padding: 0.5rem 0;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+        <h1>Nuestra historia juntos</h1>
+		<table class="historia-table">
+			<tr>
+				<td><img src="img/foto1.jpg" alt="Foto 1" class="historia-img"></td>
+				<td class="historia-text">Se que no pude estar en tu vida desde el principio, pero si quiero poder estar en tu vida hasta el final, 
+                    pasaste momentos dificiles, noches de amarguras, pero Dios me puso en 
+                    tu camino por un motivo, y quiero poder hacerte feliz y darte todo lo que tu te mereces.</td>
+			</tr>
+			<tr>
+				<td class="historia-text">Tu y Hadasah son la luz de mi vida, el motivo de mis sonrisas,
+                    la paz de mis tormentas, son ustedes quienes me hacen sentir completo y feliz cada dia.
+                </td>
+				<td><img src="img/foto2.jpg" alt="Foto 2" class="historia-img"></td>
+			</tr>
+			<tr>
+				<td><img src="img/foto3.jpg" alt="Foto 3" class="historia-img"></td>
+				<td class="historia-text">Quiero poder estar siempre a tu lado y de la bebé, poder verla crecer
+                    y ser parte de sus primeros logros, sus primeras metas, de cada una de sus sonrisas.
+                    Quiero ser el hombre que te haga feliz a ti y a ella, el hombre que las cuide y las proteja siempre.
+                </td>
+			</tr>
+		</table>
+        <br><br>
+		<a href="nuestrahistoria2.html" style="display:inline-block;padding:0.75em 2em;font-size:1.2rem;background:#0078d7;color:#fff;text-decoration:none;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,0.08);transition:background 0.2s;">Continuar</a>
+	</div>
+</body>
+</html>

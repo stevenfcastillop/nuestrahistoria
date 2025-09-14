@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nuestra Historia en Videos</title>
+	<style>
+		:root {
+			--rosa: #ffb6c1;
+			--rosa-fuerte: #e75480;
+			--dorado: #ffd700;
+			--blanco: #fff8f0;
+			--texto: #a8325a;
+		}
+		body {
+			margin: 0;
+			padding: 0;
+			min-height: 100vh;
+			background: linear-gradient(135deg, var(--rosa) 0%, var(--dorado) 100%);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.container {
+			text-align: center;
+			width: 95vw;
+			max-width: 900px;
+			margin: 2rem auto;
+			background: var(--blanco);
+			border-radius: 24px;
+			box-shadow: 0 4px 24px rgba(231,84,128,0.12);
+			padding: 2rem 1rem;
+			border: 2px solid var(--dorado);
+			position: relative;
+		}
+		.container:before {
+			content: '🎬';
+			position: absolute;
+			top: -1.5rem;
+			left: 50%;
+			transform: translateX(-50%);
+			font-size: 2.5rem;
+			color: var(--rosa-fuerte);
+			text-shadow: 0 2px 8px var(--dorado);
+		}
+		.historia-table {
+			width: 100%;
+			border-collapse: separate;
+			border-spacing: 0 2rem;
+		}
+		.historia-table td {
+			vertical-align: middle;
+			text-align: center;
+			padding: 1rem;
+		}
+		.historia-video {
+			width: 100%;
+			max-width: 320px;
+			aspect-ratio: 16/9;
+			border-radius: 16px;
+			box-shadow: 0 1px 8px var(--rosa-fuerte);
+			background: #000;
+			border: 2px solid var(--dorado);
+		}
+		.historia-text {
+			font-size: clamp(1rem, 2.5vw, 1.3rem);
+			color: var(--texto);
+			padding: 0 0.5rem;
+		}
+		@media (max-width: 700px) {
+			.historia-table, .historia-table tbody, .historia-table tr, .historia-table td {
+				display: block;
+				width: 100%;
+			}
+			.historia-table tr {
+				margin-bottom: 2rem;
+			}
+			.historia-table td {
+				padding: 0.5rem 0;
+			}
+			.historia-video {
+				max-width: 100vw;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Nuestra historia en videos</h1>
+		<table class="historia-table">
+			<tr>
+				<td>
+					<!-- YouTube video embed -->
+                    <iframe class="historia-video" src="https://www.youtube.com/embed/VEOSIzFYObI?si=K0IUwHFW7pHhyJb6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </td>
+				<td class="historia-text">Espero el video lo puedas ver, pero esta cancion fue la que escuchamos en la radio,
+                    la que buscabamos y buscabamos y no podiamos encontrar, y al final la encontramos. La essuchabamos cuando podiamos,
+                    e incluso aparecia cada vez mas en la radio, y cada vez que la escuchabamos, era un momento especial.
+                </td>
+			</tr>
+			<tr>
+				<td class="historia-text">Contigo todo es tan magico, a tu lado todo se siente especial,
+                    cada risa, cada abrazo, cada momento compartido se vuelve un recuerdo inolvidable.
+                    Cada salida contigo me llena de felicidad y me hace sentir afortunado de tenerte en mi vida.
+				</td>
+				<td>
+					<!-- TikTok video embed -->
+					<video class="historia-video" controls>
+						<source src="img/video1.mp4" type="video/mp4">
+						Tu navegador no soporta la reproducción de video.
+					</video>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<video class="historia-video" controls>
+						<source src="img/video2.mp4" type="video/mp4">
+						Tu navegador no soporta la reproducción de video.
+					</video>
+                </td>
+				<td class="historia-text">Jamas olvidare ese dia, fue un dia tan especial, y me siento tan afortunado de haberlo compartido contigo,
+                    de haber podido estar a tu lado en ese momento tan importante. Cada vez que veo ese video, me llena de alegria
+                    y me recuerda lo mucho que te amo y lo feliz que soy a tu lado. Fue la primera vez que me dijiste TE AMO y lo 
+                    llevare siempre en mi corazon.
+				</td>
+			</tr>
+		</table>
+		<br><br>
+		<a href="nuestrahistoria3.html" style="display:inline-block;padding:0.75em 2em;font-size:1.2rem;background:#0078d7;color:#fff;text-decoration:none;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,0.08);transition:background 0.2s;">Continuar</a>
+	</div>
+</body>
+</html>
